@@ -24,7 +24,7 @@ int main(void)
 				putchar(i);
 				putchar(j);
 				putchar(z);
-				if (i == 55 && j == 56 && z ==57)
+				if (i == 55 && j == 56 && z == 57)
 				{
 					putchar('\n');
 				}
