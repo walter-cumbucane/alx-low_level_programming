@@ -10,7 +10,8 @@
 
 int main(void)
 {
-	for (int i = 97 ; i <= 122; i++)
+	int i = 97;
+	while (i <= 122)
 	{
 		if (i == 122)
 		{
@@ -21,6 +22,7 @@ int main(void)
 		{
 			putchar (i);
 		}
+		i++;
 	}
 	return (0);
 }
