@@ -11,16 +11,13 @@
 int main(void)
 {
 	int i = 97;
+
 	while (i <= 122)
 	{
+		putchar(i);
 		if (i == 122)
 		{
-			putchar(i);
 			putchar('\n');
-		}
-		else
-		{
-			putchar (i);
 		}
 		i++;
 	}
