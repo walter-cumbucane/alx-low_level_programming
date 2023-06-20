@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Function of interest
  *
- * Description: 'the program's description'
+ * Description: 'prints out all alphabet in lowercasw'
  *
- * Return: Always 0 (Success)
+ * Return: Don't return anything
  */
 
 void print_alphabet(void)
 {
 	int i = 97;
+
 	while (i <= 122)
 	{
 		_putchar(i);
