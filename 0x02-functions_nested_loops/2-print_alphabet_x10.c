@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * print_alphabet_x10 - Function of interest
@@ -13,7 +13,7 @@ void print_alphabet_x10(void)
 	int i;
 	int j = 1;
 
-	while (j <=10)
+	while (j <= 10)
 	{
 		i = 97;
 		while (i <= 122)
