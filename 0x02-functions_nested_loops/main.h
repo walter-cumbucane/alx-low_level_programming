@@ -20,3 +20,6 @@ int _islower(int c);
 
 /* *Task 4 function declaration */
 int _isalpha(int n);
+
+/* *Task 5 function declaration */
+int print_sign(int n);
