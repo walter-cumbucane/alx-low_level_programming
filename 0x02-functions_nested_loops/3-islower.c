@@ -1,9 +1,8 @@
+
 /**
- * islower - Function of interest
- *
- * Description: 'Checks whether a letter is lowercase or not'
- *
- * Return: Don't return anything
+ *_islower - checks for a lowercase character
+ *@c: letter being tested
+ * Return: Always 0
  */
 
 int _islower(int c)
