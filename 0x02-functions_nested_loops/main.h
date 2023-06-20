@@ -23,3 +23,6 @@ int _isalpha(int n);
 
 /* *Task 5 function declaration */
 int print_sign(int n);
+
+/* *Task 6 function declaration */
+int _abs(int c);
