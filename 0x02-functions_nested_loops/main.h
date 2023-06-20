@@ -10,16 +10,4 @@ int _putchar(char c);
 
 
 /* * Task 1 function declaration */
-void print_alphabet(void)
-{
-	int i = 97;
-	while (i <= 122)
-	{
-		_putchar(i);
-		if (i == 122)
-		{
-			_putchar('\n');
-		}
-		i++;
-	}
-}
+void print_alphabet(void);
