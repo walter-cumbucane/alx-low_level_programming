@@ -11,3 +11,6 @@ int _putchar(char c);
 
 /* * Task 1 function declaration */
 void print_alphabet(void);
+
+/* *Task 2 function declaration */
+void print_alphabet_x10(void);
