@@ -17,3 +17,6 @@ void print_alphabet_x10(void);
 
 /* *Task 3 function declaration */
 int _islower(int c);
+
+/* *Task 4 function declaration */
+int _isalpha(int n);
