@@ -6,11 +6,7 @@
 
 
 /* *_putchar function declaration */
-#include <unistd.h>
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+int _putchar(char c);
 
 
 /* * Task 1 function declaration */
