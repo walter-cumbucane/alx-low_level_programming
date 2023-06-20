@@ -14,3 +14,6 @@ void print_alphabet(void);
 
 /* *Task 2 function declaration */
 void print_alphabet_x10(void);
+
+/* *Task 3 function declaration */
+int _islower(int c);
