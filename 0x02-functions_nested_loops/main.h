@@ -29,3 +29,12 @@ int _abs(int c);
 
 /* *Task 7 function declaration */
 int print_last_digit(int c);
+
+/* *Task 8 function declaration */
+void jack_bauer(void);
+
+/* *Task 9 function declaration */
+
+
+/* *Task 10 function declaration */
+int add(int a, int b);
