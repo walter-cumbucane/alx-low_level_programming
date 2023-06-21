@@ -23,6 +23,6 @@ int main(void)
 		}
 		i++;
 	}
-	printf("%d", sum);
+	printf("%d\n", sum);
 	return (0);
 }
