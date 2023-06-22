@@ -19,3 +19,6 @@ int mul(int a, int b);
 
 /* * Task 3 function declaration */
 void print_numbers(void);
+
+/* * Task 4 function declaration */
+void print_most_numbers(void);
