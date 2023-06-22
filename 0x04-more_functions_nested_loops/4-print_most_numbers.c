@@ -21,7 +21,7 @@ void print_most_numbers(void)
 		_putchar(i);
 		if (i == 57)
 		{
-			_putchar(i);
+			_putchar('\n');
 		}
 		i++;
 	}
