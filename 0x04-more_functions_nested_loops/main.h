@@ -11,3 +11,5 @@ int _putchar(char c);
 /* * Task 0 function declaration */
 int _isupper(int c);
 
+/* * Task 1 function declaration */
+int _isdigit(int c);
