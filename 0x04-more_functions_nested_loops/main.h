@@ -16,3 +16,6 @@ int _isdigit(int c);
 
 /* * Task 2 function declaration */
 int mul(int a, int b);
+
+/* * Task 3 function declaration */
+void print_numbers(void);
