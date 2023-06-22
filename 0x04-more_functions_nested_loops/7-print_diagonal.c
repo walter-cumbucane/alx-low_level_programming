@@ -21,12 +21,12 @@ void print_diagonal(int n)
 		i = 1;
 		while (i <= n)
 		{
-			_putchar('\\');
+			_putchar(92);
 			_putchar('\n');
 			j = 1;
 			while (j <= i)
 			{
-				_putchar(' ');
+				_putchar(32);
 				j++;
 			}
 			i++;
