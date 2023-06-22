@@ -22,3 +22,6 @@ void print_numbers(void);
 
 /* * Task 4 function declaration */
 void print_most_numbers(void);
+
+/* * Task 6 function declaration */
+void print_line(int n);
