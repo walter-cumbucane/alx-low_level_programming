@@ -28,3 +28,6 @@ void print_line(int n);
 
 /* * Task 7 function declaration */
 void print_diagonal(int n);
+
+/* * Task 8 function declaration */
+void print_square(int size);
