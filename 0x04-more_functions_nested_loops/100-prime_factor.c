@@ -10,34 +10,22 @@
 
 int main(void)
 {
-	long i;
-	long max;
-	long j;
-	long div;
+	long int n;
+	long int i;
 
-	max = 0;
+	n = 612852475143;
 	i = 2;
-	while (i < 612852475143)
+	while (i < n)
 	{
-		j = 1;
-		div = 0;
-		while (j <= i)
+		if (n % i == 0)
 		{
-			if (i % j == 0)
-			{
-				div += 1;
-			}
-			j++;
+			n /= i;
 		}
-		if (div == 2)
+		else
 		{
-			if (612852475143 % i == 0 && i > max)
-			{
-				max = i;
-			}
+			i++;
 		}
-		i++;
 	}
-	printf("%li\n", max);
+	printf("%ld\n", i);
 	return (0);
 }
