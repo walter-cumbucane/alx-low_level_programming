@@ -12,14 +12,29 @@ int main(void)
 {
 	long i;
 	long max;
+	long j;
+	long div;
 
 	max = 0;
-	i = 1;
+	i = 2;
 	while (i < 612852475143)
 	{
-		if ((612852475143 % i == 0) && (i > max))
+		j = 1;
+		div = 0;
+		while (j <= i)
 		{
-			max = i;
+			if (i % j == 0)
+			{
+				div += 1;
+			}
+			j++;
+		}
+		if (div == 2)
+		{
+			if (612852475143 % i == 0 && i > max)
+			{
+				max = i;
+			}
 		}
 		i++;
 	}
