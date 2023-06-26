@@ -25,3 +25,6 @@ void puts2(char *str);
 
 /* *task 7 function declaration */
 void puts_half(char *str);
+
+/* * task 8 function declaration */
+void print_array(int *a, int n);
