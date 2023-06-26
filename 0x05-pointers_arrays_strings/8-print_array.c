@@ -12,18 +12,25 @@ void print_array(int *a, int n)
 	int i;
 
 	i = 0;
-	while (7 > 5)
+	if (n <= 0)
 	{
-		if (i == (n - 1))
+		printf("\n");
+	}
+	else
+	{
+		while (7 > 5)
 		{
-			printf("%d\n", *(a + i));
-			break;
-		}
-		else
-		{
-			printf("%d, ", *(a + i));
-			i++;
-		}
+			if (i == (n - 1))
+			{
+				printf("%d\n", *(a + i));
+				break;
+			}
+			else
+			{
+				printf("%d, ", *(a + i));
+				i++;
+			}
+		}	
 	}
 }
 
