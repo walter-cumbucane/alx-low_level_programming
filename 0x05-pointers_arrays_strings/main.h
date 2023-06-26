@@ -10,3 +10,6 @@ int _putchar(char c);
 
 /* * task 0 function declaration */
 void reset_to_98(int *n);
+
+/* * task 1 function declaration */
+void swap_int(int *a, int *b);
