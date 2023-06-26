@@ -20,6 +20,9 @@ int _strlen(char *s);
 /* * task 3 function declaration */
 void _puts(char *str);
 
+/* * task 4 function declaration */
+void print_rev(char *s);
+
 /* *task 6 function declaration */
 void puts2(char *str);
 
