@@ -1,4 +1,4 @@
-#inlude "main.h"
+#include "main.h"
 
 /**
  * _strlen - set the integer to 402
@@ -48,19 +48,19 @@ void puts_half(char *str)
 	{
 		if (*(str + n) == 0)
 		{
-			putchar('\n');
+			_putchar('\n');
 			break;
 		}
 		else
 		{
 			if (len % 2 == 0)
 			{
-				putchar(*(str + n));
+				_putchar(*(str + n));
 				n++;
 			}
 			else
 			{
-				putchar(*(str + n + 1));
+				_putchar(*(str + n + 1));
 				n++;
 			}
 		}
