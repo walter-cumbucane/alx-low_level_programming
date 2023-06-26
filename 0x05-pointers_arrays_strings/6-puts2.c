@@ -14,7 +14,7 @@ void puts2(char *str)
 	i = 0;
 	while (7 > 5)
 	{
-		if (*(s + i) == 0)
+		if (*(str + i) == 0)
 		{
 			_putchar('\n');
 			break;
@@ -23,7 +23,7 @@ void puts2(char *str)
 		{
 			if (i % 2 == 0)
 			{
-				_putchar(*(s + i));
+				_putchar(*(str + i));
 				i++;
 			}
 		}
