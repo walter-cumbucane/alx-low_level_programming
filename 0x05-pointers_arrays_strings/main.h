@@ -16,3 +16,6 @@ void swap_int(int *a, int *b);
 
 /* * task 2 function declaration */
 int _strlen(char *s);
+
+/* * task 3 function declaration */
+void _puts(char *str);
