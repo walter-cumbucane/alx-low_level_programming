@@ -28,3 +28,6 @@ void puts_half(char *str);
 
 /* * task 8 function declaration */
 void print_array(int *a, int n);
+
+/* *task 9 function declaration */
+char* _strcpy(char *dest, char *src);
