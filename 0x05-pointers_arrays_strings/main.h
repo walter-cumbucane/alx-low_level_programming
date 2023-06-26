@@ -19,3 +19,6 @@ int _strlen(char *s);
 
 /* * task 3 function declaration */
 void _puts(char *str);
+
+/* *task 6 function declaration */
+void puts2(char *str);
