@@ -1,7 +1,5 @@
-#include <stdio.h>
-
 /**
- *rev_array -checks for a lowercase character
+ *reverse_array -checks for a lowercase character
  *@a: letter being tested
  *@n : letter being tested
  * Return: Always 0
@@ -11,18 +9,11 @@ void reverse_array(int *a, int n)
 {
 	int i;
 
-	i = n - 1;
-	while (i >= 0)
+	i = 0;
+	while (i <= n)
 	{
-		if (i == 0)
-		{
-			printf("%d\n", *(a + i));
-			i--;
-		}
-		else
-		{
-			printf("%d, ", *(a + i));
-			i--;
-		}
+		n--;
+		*(a + i) = *(a + n);
+		i++;
 	}
 }
