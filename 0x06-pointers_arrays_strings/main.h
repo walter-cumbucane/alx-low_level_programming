@@ -21,3 +21,6 @@ int _strcmp(char *s1, char *s2);
 
 /* * task 4 function declaration */
 void reverse_array(int *a, int n);
+
+/* * task 5 function declaration */
+char *string_toupper(char *s);
