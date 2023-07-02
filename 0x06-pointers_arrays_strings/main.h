@@ -15,3 +15,6 @@ char *_strncat(char *dest, char *src, int n);
 
 /* * task 2 function declaration */
 char *_strncpy(char *dest, char *src, int n);
+
+/* * task 3 function declaration */
+int _strcmp(char *s1, char *s2);
