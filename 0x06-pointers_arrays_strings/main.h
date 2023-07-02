@@ -10,3 +10,5 @@ int _putchar(char c);
 /* * task 0 function declaration */
 char *_strcat(char *dest, char *src);
 
+/* * task 1 function declaration */
+char *_strncat(char *dest, char *src, int n);
