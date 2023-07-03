@@ -18,3 +18,6 @@ char *_strchr(char *s, char c);
 
 /* * task 3 function declaration */
 unsigned int _strspn(char *s, char *accept);
+
+/* * task 4 function declaration */
+char *_strbrk(char *s, char *accept);
