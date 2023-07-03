@@ -1,4 +1,4 @@
-i/**
+/**
  *_strchr -checks for a lowercase character
  *@s: letter being tested
  *@c : letter being tested
@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + i) == 0)
 		{
-			s = 0;
+			s = NULL;
 			break;
 		}
 		if (*(s + i) == c)
