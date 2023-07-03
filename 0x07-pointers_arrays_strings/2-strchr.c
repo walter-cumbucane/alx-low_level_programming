@@ -10,13 +10,8 @@ char *_strchr(char *s, char c)
 	int i;
 
 	i = 0;
-	while (7 > 5)
+	while (*(s + i) != 0)
 	{
-		if (*(s + i) == 0)
-		{
-			s = 0;
-			break;
-		}
 		if (*(s + i) == c)
 		{
 			s += i;
@@ -24,5 +19,12 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	return (s);
+	if (*(s + i) == c)
+	{
+		return (s);
+	}
+	else
+	{
+		return (0);
+	}
 }
