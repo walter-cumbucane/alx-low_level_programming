@@ -15,3 +15,6 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 
 /* * task 2 function declaration */
 char *_strchr(char *s, char c);
+
+/* * task 3 function declaration */
+unsigned int _strspn(char *s, char *accept);
