@@ -1,11 +1,11 @@
 /**
- *_strbrk -checks for a lowercase character
+ *_strpbrk -checks for a lowercase character
  *@s: letter being tested
  *@accept : letter being tested
  * Return: Always 0
  */
 
-char *_strbrk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int i;
 	int j;
