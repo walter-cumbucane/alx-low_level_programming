@@ -9,5 +9,3 @@ int _putchar(char c);
 
 /* * task 0 function declaration */
 char *_memset(char *s, char b, unsigned int n);
-
-/* *task 1 function declaration */
