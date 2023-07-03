@@ -9,3 +9,6 @@ int _putchar(char c);
 
 /* * task 0 function declaration */
 char *_memset(char *s, char b, unsigned int n);
+
+/* * task 2 function declaration */
+char *_strchr(char *s, char c);
