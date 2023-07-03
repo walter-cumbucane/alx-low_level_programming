@@ -27,3 +27,6 @@ char *_strstr(char *haystack, char *needle);
 
 /* * task 6 function declaration */
 void print_chessboard(char (*a)[8]);
+
+/* * task 7 function declaration */
+void print_diagsums(int *a, int size);
