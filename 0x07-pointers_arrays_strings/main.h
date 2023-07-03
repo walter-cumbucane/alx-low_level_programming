@@ -24,3 +24,6 @@ char *_strpbrk(char *s, char *accept);
 
 /* * task 5 function declaration */
 char *_strstr(char *haystack, char *needle);
+
+/* * task 6 function declaration */
+void print_chessboard(char (*a)[8]);
