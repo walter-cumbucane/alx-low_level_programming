@@ -30,3 +30,6 @@ void print_chessboard(char (*a)[8]);
 
 /* * task 7 function declaration */
 void print_diagsums(int *a, int size);
+
+/* * task 8 function declaration */
+void set_string(char **s, char *to);
