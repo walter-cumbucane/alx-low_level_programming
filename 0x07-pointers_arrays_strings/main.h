@@ -21,3 +21,6 @@ unsigned int _strspn(char *s, char *accept);
 
 /* * task 4 function declaration */
 char *_strpbrk(char *s, char *accept);
+
+/* * task 5 function declaration */
+char *_strstr(char *haystack, char *needle);
