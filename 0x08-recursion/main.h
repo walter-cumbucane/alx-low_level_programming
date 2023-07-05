@@ -9,3 +9,9 @@ int _putchar(char c);
 
 /* * task 0 function declaration */
 void _puts_recursion(char *s);
+
+/* * task 1 function declaration */
+
+
+/* * task 2 function declaration */
+int _strlen_recursion(char *s);
