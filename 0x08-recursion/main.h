@@ -21,3 +21,6 @@ int factorial(int n);
 
 /* * task 4 function declaration */
 int _pow_recursion(int x, int y);
+
+/* * task 5 function declaration */
+int _sqrt_recursion(int n);
