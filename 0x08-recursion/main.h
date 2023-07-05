@@ -15,3 +15,6 @@ void _puts_recursion(char *s);
 
 /* * task 2 function declaration */
 int _strlen_recursion(char *s);
+
+/* * task 3 function declaration */
+int factorial(int n);
