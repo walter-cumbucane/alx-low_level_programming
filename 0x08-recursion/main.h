@@ -18,3 +18,6 @@ int _strlen_recursion(char *s);
 
 /* * task 3 function declaration */
 int factorial(int n);
+
+/* * task 4 function declaration */
+int _pow_recursion(int x, int y);
