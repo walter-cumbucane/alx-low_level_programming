@@ -21,7 +21,7 @@ int wildcmp(char *s1, char *s2)
 	if (*s1 == *s2)
 	{
 		result = 1;
-		result *= _string_cmp(s1 + 1, s2 + 1);
+		result *= wildcmp(s1 + 1, s2 + 1);
 		return (result);
 	}
 	else
