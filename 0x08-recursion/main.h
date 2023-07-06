@@ -27,3 +27,6 @@ int _sqrt_recursion(int n);
 
 /* * task 6 function declaration */
 int is_prime_number(int n);
+
+/* * task 8 function declaration */
+int wildcmp(char *s1, char *s2);
