@@ -24,3 +24,6 @@ int _pow_recursion(int x, int y);
 
 /* * task 5 function declaration */
 int _sqrt_recursion(int n);
+
+/* * task 6 function declaration */
+int is_prime_number(int n);
