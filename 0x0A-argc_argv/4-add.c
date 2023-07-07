@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 		int sum;
 
 		i = 1;
-		mul = 0;
+		sum = 0;
 		while (i < argc)
 		{
 			if (isdigit(**(argv + i)) == 0)
@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 			sum += atoi(*(argv + i));
 			i++;
 		}
-		printf("%d\n", mul);
+		printf("%d\n", sum);
 		return (0);
 	}
 }
