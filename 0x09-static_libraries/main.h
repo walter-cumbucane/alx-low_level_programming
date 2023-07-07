@@ -1,6 +1,6 @@
 /* * To create the object file of the main header file */
-#ifndef FILE_MAIN
-#define FILE_MAIN
+#ifndef FILE_MY
+#define FILE_MY
 
 
 /* * FUnction's declaration */
