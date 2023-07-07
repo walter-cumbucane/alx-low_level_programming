@@ -15,25 +15,25 @@
 int main(int argc, char **argv)
 {
 	if (argc == 1)
-	{	
+	{
 		printf("0\n");
 		return (0);
 	}
 	else
 	{
 		int i;
-		int mul;
+		int sum;
 
 		i = 1;
-		mul = 1;
+		mul = 0;
 		while (i < argc)
 		{
-			if ( isdigit(**(argv + i)) == 0)
+			if (isdigit(**(argv + i)) == 0)
 			{
 				printf("Error\n");
 				return (1);
 			}
-			mul *= atoi(*(argv + i));
+			sum += atoi(*(argv + i));
 			i++;
 		}
 		printf("%d\n", mul);
