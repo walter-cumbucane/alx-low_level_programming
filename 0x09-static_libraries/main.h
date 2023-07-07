@@ -1,9 +1,9 @@
-/* * It is not recommended to put function definitions 
-* in a header file. Ideally there should be only
-* function declarations. Purpose of this code is
-* to only demonstrate working of header files.
-*/
+/* * To create the object file of the main header file */
+#ifndef FILE_MAIN
+#define FILE_MAIN
 
+
+/* * FUnction's declaration */
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -24,3 +24,5 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
+
+#endif
