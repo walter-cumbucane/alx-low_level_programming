@@ -17,12 +17,13 @@ int main(int argc, char **argv)
 	if (argc == 1)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	else
 	{
 		int i;
 		int sum;
+		int num;
 
 		i = 1;
 		sum = 0;
@@ -33,7 +34,13 @@ int main(int argc, char **argv)
 				printf("Error\n");
 				return (1);
 			}
-			sum += atoi(*(argv + i));
+			num = atoi(*(argv + i));
+			if (num < 0)
+			{
+				i++;
+				continue;
+			}
+			sum += num;
 			i++;
 		}
 		printf("%d\n", sum);
