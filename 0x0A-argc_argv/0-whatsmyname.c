@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *@argc : number of arguments inserted
- @argv : array of strings, where each string is an argument that was inserted
+* @argv : array of strings, where each string is an argument that was inserted
  *
  * Description: 'the program's description'
  *
