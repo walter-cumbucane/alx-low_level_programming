@@ -23,24 +23,23 @@ int main(int argc, char **argv)
 	{
 		int i;
 		int sum;
-		int num;
+		int j;
 
 		i = 1;
 		sum = 0;
 		while (i < argc)
 		{
-			if (isdigit(**(argv + i)) == 0)
+			j = 0;
+			while (*(*(argv + i) + j) != 0)
 			{
-				printf("Error\n");
-				return (1);
+				if (isdigit(*(*(argv + i) + j)) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
+				j++;
 			}
-			num = atoi(*(argv + i));
-			if (num < 0)
-			{
-				i++;
-				continue;
-			}
-			sum += num;
+			sum += atoi(*(argv + i));
 			i++;
 		}
 		printf("%d\n", sum);
