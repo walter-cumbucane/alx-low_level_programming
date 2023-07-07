@@ -1,6 +1,5 @@
 /* * To create the object file of the main header file */
-#ifndef FILE_MY
-#define FILE_MY
+
 
 
 /* * FUnction's declaration */
@@ -24,5 +23,3 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
-
-#endif
