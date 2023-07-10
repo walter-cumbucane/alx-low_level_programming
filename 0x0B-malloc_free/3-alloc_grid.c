@@ -1,5 +1,6 @@
 #include <stdlib.h>
 
+
 /**
  * alloc_grid - set the integer to 402
  * @width: a pointer to the beginning of a string
@@ -35,9 +36,9 @@ int **alloc_grid(int width, int height)
 		}
 	}
 	i = 0;
-	while (i < length)
+	while (i < height)
 	{
-		j = 0
+		j = 0;
 		while (j < width)
 		{
 			*(*(arr + i) + j) = 0;
