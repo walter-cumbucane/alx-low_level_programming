@@ -10,3 +10,6 @@ int _putchar(char c);
 
 /* * task 0 function declaration */
 char *create_array(unsigned int size, char c);
+
+/* * task 1 function declaration */
+char *_strdup(char *str);
