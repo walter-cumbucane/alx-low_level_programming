@@ -13,3 +13,6 @@ char *create_array(unsigned int size, char c);
 
 /* * task 1 function declaration */
 char *_strdup(char *str);
+
+/* * task 2 function declaration */
+char *str_concat(char *s1, char *s2);
