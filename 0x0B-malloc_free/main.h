@@ -16,3 +16,6 @@ char *_strdup(char *str);
 
 /* * task 2 function declaration */
 char *str_concat(char *s1, char *s2);
+
+/* *task 3 function declaration */
+int **alloc_grid(int width, int height);
