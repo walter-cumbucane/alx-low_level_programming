@@ -22,3 +22,9 @@ int **alloc_grid(int width, int height);
 
 /* * task 4 function declaration */
 void free_grid(int **grid, int height);
+
+/* * task 5 function declaration */
+char **argstostr(int ac, char **av);
+
+/* * task 6 function declaration */
+char **strtow(char *str);
