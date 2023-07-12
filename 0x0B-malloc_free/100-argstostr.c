@@ -34,9 +34,9 @@ int _amount(int n, char **argv)
 	int i;
 	int amount;
 
-	i = 1;
+	i = 0;
 	amount = 0;
-	while (i <= n)
+	while (i < n)
 	{
 		amount += _strlen(*(argv + i)) + 1;
 		i++;
@@ -61,7 +61,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	amount = _amount(ac - 1, av);
+	amount = _amount(ac, av);
 	s = malloc(sizeof(char) * amount);
 	if (s == NULL)
 	{
@@ -78,10 +78,17 @@ char *argstostr(int ac, char **av)
 			p++;
 			j++;
 		}
-		*(s + p) = '\n';
-		p++;
-		i++;
+		if(p == amount - 1)
+		{
+			*(s + p) = 0;
+			i++;
+		}
+		else
+		{
+			*(s + p) = '\n';
+			p++;
+			i++;
+		}
 	}
-	*(s + p) = 0;
 	return (s);
 }
