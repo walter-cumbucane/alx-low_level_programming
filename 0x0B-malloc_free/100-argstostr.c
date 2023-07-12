@@ -78,7 +78,7 @@ char *argstostr(int ac, char **av)
 			p++;
 			j++;
 		}
-		if(p == amount - 1)
+		if (p == amount - 1)
 		{
 			*(s + p) = 0;
 			i++;
