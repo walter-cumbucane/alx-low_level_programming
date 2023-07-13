@@ -12,3 +12,6 @@ void *malloc_checked(unsigned int b);
 
 /* * task 1 function declaration */
 char *string_nconcat(char *s1, char *s2, unsigned int n);
+
+/* * task 2 function declaration */
+void *_calloc(unsigned int nmemb, unsigned int size);
