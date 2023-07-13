@@ -9,3 +9,6 @@ int _putchar(char c);
 
 /* * task 0 function declaration */
 void *malloc_checked(unsigned int b);
+
+/* * task 1 function declaration */
+char *string_nconcat(char *s1, char *s2, unsigned int n);
