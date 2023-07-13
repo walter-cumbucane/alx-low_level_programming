@@ -136,7 +136,10 @@ char *_con_str(char *s1, char *s2, char *s, int i, int j, unsigned int n)
 	unsigned int len2;
 
 	(void)j;
-	len2 = _strlen(s2);
+	if (s2 != NULL)
+	{
+		len2 = _strlen(s2);
+	}
 	if (s1 == NULL && s2 == NULL)
 	{
 		*s = 0;
