@@ -15,3 +15,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n);
 
 /* * task 2 function declaration */
 void *_calloc(unsigned int nmemb, unsigned int size);
+
+/* * task 3 function declaration */
+int *array_range(int min, int max);
