@@ -1,5 +1,5 @@
 #include "dog.h"
-
+#include <stdlib.h>
 
 /**
  * init_dog - set the integer to 402
@@ -12,20 +12,11 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	int i = 0;
 
-	while (*(d + i) != 0)
+	if (d != NULL)
 	{
-		(*(d + i)).name = *(name + i);
-		i++;
+		(*d).name = name;
+		(*d).age = age;
+		(*d).owner = owner;
 	}
-	(*(d + i)).name = 0;
-	(*d).age = age;
-	i = 0;
-	while (*(d + i) != 0)
-	{
-		(*(d + i)).owner = *(owner + i);
-		i++;
-	}
-	(*(d + i)).owner = 0;
 }
