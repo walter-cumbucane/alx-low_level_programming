@@ -21,4 +21,7 @@ struct dog
 /* task 0 function declaration */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
+/* task 1 function declaration */
+void print_dog(struct dog *d);
+
 #endif
