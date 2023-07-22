@@ -2,29 +2,6 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 
-
-/**
- * _strlen - set the integer to 402
- * @s: a pointer the integer we want to set to 98
- *
- * Return: nothing
- */
-
-int _strlen(const char * const s)
-{
-	int len;
-	int i;
-
-	len = 0;
-	i = 0;
-	while (*(s + i) != '\0')
-	{
-		len++;
-		i++;
-	}
-	return (len);
-}
-
 /**
  * _length - checks for a lowercase character
  *@mem : letter being tested
@@ -85,7 +62,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ptr;
 	int i = 0;
-	char *mem = malloc(_strlen(format) * sizeof(char));
+	char *mem = malloc(10 * sizeof(char));
 	char t;
 	char *s;
 
