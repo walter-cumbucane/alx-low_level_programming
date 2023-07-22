@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ptr;
 	int i = 0;
-	char *mem = malloc(10 * sizeof(char));
+	char *mem = malloc(250 * sizeof(char));
 	char t;
 	char *s;
 
