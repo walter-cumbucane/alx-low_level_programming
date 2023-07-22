@@ -85,7 +85,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ptr;
 	int i = 0;
-	char *mem = calloc(_strlen(format), sizeof(char));
+	char *mem = malloc(_strlen(format) * sizeof(char));
 	char t;
 	char *s;
 
