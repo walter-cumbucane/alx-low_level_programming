@@ -14,4 +14,7 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 /* * task 2 function declaration */
 void print_strings(const char *separator, const unsigned int n, ...);
 
+/* * task 3 function declaration */
+void print_all(const char * const format, ...);
+
 #endif
