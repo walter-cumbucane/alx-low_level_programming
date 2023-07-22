@@ -3,17 +3,18 @@
 #include "variadic_functions.h"
 
 /**
- * _strlenRecurise: calculates the length of a string recursively
- * @str: a pointer the integer we want to set to 98
+ * _strlenRecursive - checks for a lowercase character
+ *@str: letter being tested
+ * Return: Always 0
  *
- * Return: nothing
  */
+
 
 int _strlenRecursive(const char * const str)
 {
 	char t = *str;
-	
-	switch(t)
+
+	switch (t)
 	{
 		case '\0':
 			return (0);
