@@ -34,7 +34,7 @@ unsigned int _strlen(const char *s)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *current;
+	list_t *new, *findtheend;
 
 	new = malloc(sizeof(list_t));
 	if (!new)
@@ -47,9 +47,9 @@ list_t *add_node_end(list_t **head, const char *str)
 		(*head) = new;
 		return (new);
 	}
-	current = (*head);
-	while (current->next != NULL)
-		current = current->next;
-	current->next = new;
+	findtheend = (*head);
+	while (findtheend->next != NULL)
+		findtheend = findtheend->next;
+	findtheend->next = new;
 	return (new);
 }
