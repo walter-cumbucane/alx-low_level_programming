@@ -24,32 +24,25 @@ unsigned int _strlen(const char *s)
 }
 
 /**
- * add_node - adds a node to the beginning of a singly linked list
+ * add_node_end - adds a node to the end of a singly linked list
  * @head: a pointer to the beginning of the first node of a SLL
  * @str : a string to be stored in the new node of the SLL
  *
  * Return: a pointer to the newly created node
  */
 
-
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *current;
+	list_t *new;
 
-	current = *head;
-	*head = malloc(sizeof(list_t));
-	if ((*head) == NULL)
+	new = malloc(sizeof(list_t));
+	if (!new)
 		return (NULL);
-	if (str == NULL)
-	{
-		(*head)->str = "(nil)";
-		(*head)->len = 0;
-	}
-	else
-	{
-		(*head)->str = strdup(str);
-		(*head)->len = _strlen((*head)->str);
-	}
-	(*head)->next = current;
+	new->str = strdup(str);
+	new->len = _strlen(str);
+	new->next = NULL;
+	if ((*head) != NULL)
+		(*head)->next = new;
+	(*head) = new;
 	return (*head);
 }
