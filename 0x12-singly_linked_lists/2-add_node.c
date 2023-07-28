@@ -36,14 +36,14 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *current;
 
-	current = *head;
-	*head = malloc(sizeof(list_t));
-	if (*head == NULL)
+	current = malloc(sizeof(list_t));
+	if (current == NULL)
 	{
 		return (NULL);
 	}
-	(*head)->str = strdup(str);
-	(*head)->len = _strlen((*head)->str);
-	(*head)->next = current;
+	current->str = strdup(str);
+	current->len = _strlen((current)->str);
+	current->next = *head;
+	*head = current;
 	return (*head);
 }
