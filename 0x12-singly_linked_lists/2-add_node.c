@@ -8,7 +8,7 @@
  * Return: nothing
  */
 
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
 	int len;
 	int i;
@@ -36,14 +36,12 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *current;
 
-	current = malloc(sizeof(list_t));
-	if (current == NULL)
-	{
+	current = *head;
+	*head = malloc(sizeof(list_t));
+	if (*head == NULL)
 		return (NULL);
-	}
-	current->str = strdup(str);
-	current->len = _strlen((current)->str);
-	current->next = (*head);
-	(*head) = current;
+	(*head)->str = strdup(str);
+	(*head)->len = _strlen((*head)->str);
+	(*head)->next = current;
 	return (*head);
 }
