@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <string.h>
+#include <stdio.h>
 
 /**
  * _strlen - set the integer to 402
@@ -33,7 +34,7 @@ unsigned int _strlen(const char *s)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new;
+	list_t *new, *current;
 
 	new = malloc(sizeof(list_t));
 	if (!new)
@@ -41,8 +42,14 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->str = strdup(str);
 	new->len = _strlen(str);
 	new->next = NULL;
-	if ((*head) != NULL)
-		(*head)->next = new;
-	(*head) = new;
-	return (*head);
+	if ((*head) == NULL)
+	{
+		(*head) = new;
+		return (new);
+	}
+	current = (*head);
+	while (current->next != NULL)
+		current = current->next;
+	current->next = new;
+	return (new);
 }
