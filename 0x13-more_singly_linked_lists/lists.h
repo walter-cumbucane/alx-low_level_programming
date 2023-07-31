@@ -25,4 +25,7 @@ size_t print_listint(const listint_t *h);
 /* task 1 function declaration */
 size_t listint_len(const listint_t *h);
 
+/* task 2 function declaration */
+listint_t *add_nodeint(listint_t **head, const int n);
+
 #endif
