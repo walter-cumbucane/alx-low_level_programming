@@ -6,17 +6,16 @@
 int _putchar(char c);
 
 /**
- * struct list_s - singly linked list
- * @str: string - (malloc'ed string)
- * @len: length of the string
- * @next: points to the next node
- *
- * Description: singly linked list node structure
- */
+  * struct listint_s - singly linked list
+  * @n : data
+  * @next : points to the next node
+  *
+  *Description: singly linked list node structure
+  */
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 /* task 0 function declaration */
