@@ -14,7 +14,7 @@ void free_list(list_t *head)
 	if (head == NULL)
 		return;
 	current = head;
-	while((*current).next != NULL)
+	while ((*current).next != NULL)
 	{
 		next = (*current).next;
 		free((*current).str);
