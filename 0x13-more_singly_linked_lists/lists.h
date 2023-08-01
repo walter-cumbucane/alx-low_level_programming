@@ -36,4 +36,7 @@ void free_listint(listint_t *head);
 /* task 5 function declaration */
 void free_listint2(listint_t **head);
 
+/* task 6 function declaration */
+int pop_listint(listint_t **head);
+
 #endif
