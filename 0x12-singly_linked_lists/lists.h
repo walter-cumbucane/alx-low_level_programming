@@ -32,4 +32,7 @@ list_t *add_node(list_t **head, const char *str);
 /* task 3 function declaration */
 list_t *add_node_end(list_t **head, const char *str);
 
+/* task 4 function declaration */
+void free_list(list_t *head);
+
 #endif
