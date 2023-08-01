@@ -45,4 +45,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 /* task 8 function declaration */
 int sum_listint(listint_t *head);
 
+/* task 9 function declaration */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
+
 #endif
