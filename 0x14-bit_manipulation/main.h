@@ -9,6 +9,6 @@ int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
 
 /* task 1 function declaration */
-void print_binary(long unsigned int n);
+void print_binary(unsigned long int n);
 
 #endif

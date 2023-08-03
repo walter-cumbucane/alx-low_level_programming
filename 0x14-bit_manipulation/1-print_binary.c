@@ -7,11 +7,11 @@
  * Return: the number of nodes of a singly linked list
  */
 
-void print_binary(long unsigned int n)
+void print_binary(unsigned long int n)
 {
 	int i;
 	int flag = 0;
-	long unsigned int current;
+	unsigned long int current;
 
 	if (n == 0)
 	{
