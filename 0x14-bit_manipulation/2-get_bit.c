@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_binary - prints all the nodes of a singly linked list
+ * get_bit - prints all the nodes of a singly linked list
  * @n: a pointer to the first node of a singly linked list
- *
+ * @index : the desired index
  * Return: the number of nodes of a singly linked list
  */
 
