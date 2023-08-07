@@ -44,16 +44,26 @@ size_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	file_content = malloc(sizeof(char) * (letters + 1));
 	if (file_content == NULL)
+	{
+		close(fd);
 		return (0);
+	}
 	check = read(fd, file_content, letters);
 	if (check == -1)
+	{
+		close(fd);
 		return (0);
+	}
 	*(file_content + letters) = '\0';
 	if (letters > _strlen(file_content))
 		check = write(STDOUT_FILENO, file_content, _strlen(file_content));
 	else
 		check = write(STDOUT_FILENO, file_content, letters);
 	if (check == -1)
+	{
+		close(fd);
 		return (0);
+	}
+	close(fd);
 	return (check);
 }
