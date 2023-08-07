@@ -50,7 +50,7 @@ size_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	*(file_content + letters) = '\0';
 	if (letters > _strlen(file_content))
-			check = write(STDOUT_FILENO, file_content, _strlen(file_content));
+		check = write(STDOUT_FILENO, file_content, _strlen(file_content));
 	else
 		check = write(STDOUT_FILENO, file_content, letters);
 	if (check == -1)
