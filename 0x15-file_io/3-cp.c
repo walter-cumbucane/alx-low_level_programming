@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * void - set the integer to 402
+ * err - set the integer to 402
  * @fd: a pointer the integer we want to set to 98
  *
  * Return: nothing
@@ -61,6 +61,6 @@ int main(int argc, char **argv)
 		err(fd_source);
 	check = close(fd_destin);
 	if (check == -1)
-			err(fd_destin);
+		err(fd_destin);
 	return (EXIT_SUCCESS);
 }
