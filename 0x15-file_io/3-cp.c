@@ -61,7 +61,7 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 	fd_source = open(*(argv + 1), O_RDONLY);
-	if (fd_source == -1)
+	if (fd_source < 0)
 		err(*(argv + 1), 0);
 	fd_destin = open(*(argv + 2), O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	while ((wrt = read(fd_source, str, BUFSIZ)) > 0)
