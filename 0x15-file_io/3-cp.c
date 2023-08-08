@@ -35,7 +35,7 @@ void err(char *s, int a)
 
 int main(int argc, char **argv)
 {
-	int fd_source, fd_destin, check, wrt, a, b;
+	int fd_source, fd_destin, check, wrt, check1;
 	char *str;
 
 	str = malloc(BUFSIZ * sizeof(char));
@@ -57,13 +57,13 @@ int main(int argc, char **argv)
 	}
 	if (wrt < 0)
 		err(*(argv + 1), 0);
-	a = close(fd_source);
-	b = close(fd_destin);
-	if (a < 0 || b < 0)
+	check = close(fd_source);
+	check1 = close(fd_destin);
+	if (check < 0 || check1 < 0)
 	{
-		if (a < 0)
+		if (check < 0)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_source);
-		if (b < 0)
+		if (check1 < 0)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_destin);
 		exit(100);
 	}
