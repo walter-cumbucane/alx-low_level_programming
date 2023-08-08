@@ -64,20 +64,18 @@ int main(int argc, char **argv)
 	if (fd_source == -1)
 		err(*(argv + 1), 0);
 	fd_destin = open(*(argv + 2), O_WRONLY | O_TRUNC | O_CREAT, 0664);
-	if (fd_destin == -1)
-		err(*(argv + 2), 1);
 	while ((wrt = read(fd_source, str, BUFSIZ)) > 0)
 	{
-		if (write(fd_destin, str, wrt) != wrt)
+		if (fd_destin < 0 || write(fd_destin, str, wrt) != wrt)
 			err(*(argv + 2), 1);
 	}
-	if (wrt == -1)
+	if (wrt < 0)
 		err(*(argv + 1), 0);
 	check = close(fd_source);
-	if (check == -1)
+	if (check < 0)
 		err_close(fd_source);
 	check = close(fd_destin);
-	if (check == -1)
+	if (check < 0)
 		err_close(fd_destin);
 	return (EXIT_SUCCESS);
 }
