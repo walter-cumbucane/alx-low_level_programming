@@ -49,8 +49,11 @@ void err_ver(char *s, int flag)
 int main(int argc, char **argv)
 {
 	int fd_source, fd_destin, check, wrt;
-	char str[BUFSIZ];
+	char *str;
 
+	str = malloc(sizeof(char) * BUFSIZ);
+	if (str == NULL)
+		return (1);
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -76,5 +79,6 @@ int main(int argc, char **argv)
 	check = close(fd_destin);
 	if (check == -1)
 		err(fd_destin);
+	free(str);
 	return (EXIT_SUCCESS);
 }
