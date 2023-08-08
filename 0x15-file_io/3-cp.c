@@ -3,6 +3,18 @@
 #include <fcntl.h>
 #include <stdio.h>
 
+/**
+ * void - set the integer to 402
+ * @fd: a pointer the integer we want to set to 98
+ *
+ * Return: nothing
+ */
+
+void check(int fd)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+	exit(100);
+}
 
 /**
  * main - Entry point
@@ -15,7 +27,7 @@
 
 int main(int argc, char **argv)
 {
-	int fd_source, fd_destin, check, wrt, check1;
+	int fd_source, fd_destin, check, wrt;
 	char str[BUFSIZ];
 
 	if (argc != 3)
@@ -45,14 +57,10 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	check = close(fd_source);
-	check1 = close(fd_destin);
-	if (check < 0 || check1 < 0)
-	{
-		if (check < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_source);
-		if (check1 < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_destin);
-		exit(100);
-	}
+	if (check == -1)
+		err(fd_source);
+	check = close(fd_destin);
+	if (check == -1_
+			err(fd_destin);
 	return (EXIT_SUCCESS);
 }
