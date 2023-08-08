@@ -17,6 +17,27 @@ void err(int fd)
 }
 
 /**
+ * err_ver - set the integer to 402
+ * @s: a pointer the integer we want to set to 98
+ * @flag : a flag
+ *
+ * Return: nothing
+ */
+void err_ver(char *s, int flag)
+{
+	if (flag == 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", s);
+		exit(98);
+	}
+	else
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", s);
+		exit(99);
+	}
+}
+
+/**
  * main - Entry point
  *
  * Description: 'the program's description'
@@ -37,25 +58,18 @@ int main(int argc, char **argv)
 	}
 	fd_source = open(*(argv + 1), O_RDONLY);
 	if (fd_source == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", *(argv + 1));
-		exit(98);
-	}
+		err_ver(*(argv + 1), 0);
 	fd_destin = open(*(argv + 2), O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	while ((wrt = read(fd_source, str, BUFSIZ)) > 0)
 	{
 		if (fd_destin == -1 || write(fd_destin, str, wrt) != wrt)
 		{
 			close(fd_source);
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", *(argv + 2));
-			exit(99);
+			err_ver(*(argv + 2), 1);
 		}
 	}
 	if (wrt == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", *(argv + 1));
-		exit(98);
-	}
+		err_ver(*(argv + 1), 0);
 	check = close(fd_source);
 	if (check == -1)
 		err(fd_source);
