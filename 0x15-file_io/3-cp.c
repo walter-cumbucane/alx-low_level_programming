@@ -49,7 +49,7 @@ int main(int argc, char **argv)
 	fd_source = open(*(argv + 1), O_RDONLY);
 	if (fd_source < 0)
 		err(*(argv + 1), 0);
-	fd_destin = open(*(argv + 2), O_WRONLY | O_TRUNC | O_CREAT, 0674);
+	fd_destin = open(*(argv + 2), O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	while ((wrt = read(fd_source, str, BUFSIZ)) > 0)
 	{
 		if (fd_destin < 0 || write(fd_destin, str, wrt) != wrt)
