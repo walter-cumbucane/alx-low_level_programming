@@ -10,7 +10,7 @@
  * Return: nothing
  */
 
-void check(int fd)
+void err(int fd)
 {
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 	exit(100);
@@ -60,7 +60,7 @@ int main(int argc, char **argv)
 	if (check == -1)
 		err(fd_source);
 	check = close(fd_destin);
-	if (check == -1_
+	if (check == -1)
 			err(fd_destin);
 	return (EXIT_SUCCESS);
 }
