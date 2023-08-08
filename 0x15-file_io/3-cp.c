@@ -53,7 +53,10 @@ int main(int argc, char **argv)
 	while ((wrt = read(fd_source, str, BUFSIZ)) > 0)
 	{
 		if (fd_destin < 0 || write(fd_destin, str, wrt) != wrt)
+		{
+			close(fd_source);
 			err(*(argv + 2), 1);
+		}
 	}
 	if (wrt < 0)
 		err(*(argv + 1), 0);
