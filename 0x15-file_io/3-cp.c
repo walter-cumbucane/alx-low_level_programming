@@ -4,28 +4,6 @@
 #include <stdio.h>
 
 /**
- * _strlen - set the integer to 402
- * @s: a pointer the integer we want to set to 98
- *
- * Return: nothing
- */
-size_t _strlen(char *s)
-{
-	int len;
-	int i;
-
-	len = 0;
-	i = 0;
-	while (*(s + i) != '\0')
-	{
-		len++;
-		i++;
-	}
-	return (len);
-}
-
-
-/**
  * err - set the integer to 402
  * @s: a pointer the integer we want to set to 98
  * @a: a flag
@@ -71,10 +49,10 @@ void err_close(int fd)
 
 int main(int argc, char **argv)
 {
-	int fd_source, fd_destin, check;
+	int fd_source, fd_destin, check, wrt;
 	char *str;
 
-	str = malloc(1024 * sizeof(char));
+	str = malloc(BUFSIZ * sizeof(char));
 	if (str == NULL)
 		return (1);
 	if (argc != 3)
@@ -88,12 +66,11 @@ int main(int argc, char **argv)
 	fd_destin = open(*(argv + 2), O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (fd_destin == -1)
 		err(*(argv + 2), 1);
-	check = read(fd_source, str, 1024);
-	if (check == -1)
-		err(*(argv + 1), 0);
-	check = write(fd_destin, str, _strlen(str));
-	if (check == -1)
-		err(*(argv + 2), 1);
+	while ((wrt = read(fd_source, str, BUFSIZ)) > 0)
+	{
+		if (write(fd_destin, str, wrt) != wrt)
+			err(*(argv + 2), 1);
+	}
 	check = close(fd_source);
 	if (check == -1)
 		err_close(fd_source);
