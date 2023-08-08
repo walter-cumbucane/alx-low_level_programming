@@ -25,20 +25,6 @@ void err(char *s, int a)
 }
 
 /**
- * err_close - set the integer to 402
- * @fd: a pointer the integer we want to set to 98
- *
- * Return: nothing
- */
-
-void err_close(int fd)
-{
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-	exit(100);
-}
-
-
-/**
  * main - Entry point
  *
  * Description: 'the program's description'
@@ -49,7 +35,7 @@ void err_close(int fd)
 
 int main(int argc, char **argv)
 {
-	int fd_source, fd_destin, check, wrt;
+	int fd_source, fd_destin, check, wrt, a, b;
 	char *str;
 
 	str = malloc(BUFSIZ * sizeof(char));
@@ -63,7 +49,7 @@ int main(int argc, char **argv)
 	fd_source = open(*(argv + 1), O_RDONLY);
 	if (fd_source < 0)
 		err(*(argv + 1), 0);
-	fd_destin = open(*(argv + 2), O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	fd_destin = open(*(argv + 2), O_WRONLY | O_TRUNC | O_CREAT, 0674);
 	while ((wrt = read(fd_source, str, BUFSIZ)) > 0)
 	{
 		if (fd_destin < 0 || write(fd_destin, str, wrt) != wrt)
@@ -71,11 +57,15 @@ int main(int argc, char **argv)
 	}
 	if (wrt < 0)
 		err(*(argv + 1), 0);
-	check = close(fd_source);
-	if (check < 0)
-		err_close(fd_source);
-	check = close(fd_destin);
-	if (check < 0)
-		err_close(fd_destin);
+	a = close(fd_source);
+	b = close(fd_destin);
+	if (a < 0 || b < 0)
+	{
+		if (a < 0)
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_source);
+		if (b < 0)
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_destin);
+		exit(100);
+	}
 	return (EXIT_SUCCESS);
 }
