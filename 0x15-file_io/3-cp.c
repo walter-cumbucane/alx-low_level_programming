@@ -71,6 +71,8 @@ int main(int argc, char **argv)
 		if (write(fd_destin, str, wrt) != wrt)
 			err(*(argv + 2), 1);
 	}
+	if (wrt == -1)
+		err(*(argv + 1), 0);
 	check = close(fd_source);
 	if (check == -1)
 		err_close(fd_source);
