@@ -3,7 +3,7 @@
 /**
  * get_dnodeint_at_index - returns a node in the double linked list
  * @head: a pointer to the first node of a double linked list
- * @idx: the desired index
+ * @index: the desired index
  *
  * Return: the node at the desired index
  */
