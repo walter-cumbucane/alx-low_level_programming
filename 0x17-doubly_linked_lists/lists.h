@@ -40,6 +40,10 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 /* Task 6 function declaration */
 int sum_dlistint(dlistint_t *head);
 
+/* Task 7 function declaration */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
+
+/* Task 8 function declaration */
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
 
 #endif
