@@ -32,10 +32,13 @@ typedef struct hash_table_s
 	hash_node_t **array;
 } hash_table_t;
 
-/* Task 0 function */
+/* Task 0 function. Creates the hash table */
 hash_table_t *hash_table_create(unsigned long int size);
 
-/* Task 1 function */
+/* Task 1 function. Implements a hash function */
+unsigned long int hash_djb2(const unsigned char *str);
+
+/* Task 2 function. */
 
 
 #endif
