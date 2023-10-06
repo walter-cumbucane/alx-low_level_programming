@@ -82,7 +82,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (i == index)
 		{
-			if (ht->array[i] != NULL)
+			if (ht->array[i] == NULL)
 				ht->array[i] = pair;
 		}
 	}
