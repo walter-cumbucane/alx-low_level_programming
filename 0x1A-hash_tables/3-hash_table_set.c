@@ -84,6 +84,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (ht->array[i] == NULL)
 				ht->array[i] = pair;
+			else
+			{
+				pair->next = ht->array[i];
+				ht->array[i] = pair;
+			}
 		}
 	}
 	return (1);
