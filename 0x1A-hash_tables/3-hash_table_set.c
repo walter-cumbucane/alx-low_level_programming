@@ -87,14 +87,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			if (ht->array[i] == NULL)
 				ht->array[i] = pair;
 			else
-			{
+			{/*If key already exists, replace the value */
 				if (strcmp(key, ht->array[i]->key) == 0)
 				{
 					free(ht->array[i]->value);
 					_strcpy(ht->array[i]->value, value);
 				}
 				else
-				{
+				{/*If the key doesn't exist, add a new key to the beginning of the list */
 					pair->next = ht->array[i];
 					ht->array[i] = pair;
 				}
