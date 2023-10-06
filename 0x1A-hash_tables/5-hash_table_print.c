@@ -1,13 +1,37 @@
 #include "hash_tables.h"
 
 
+/**
+ * count_pairs - prints a hash table
+ * @ht : the hash table
+ *
+ * Return: the number of pairs in the table
+ */
+
 unsigned long int count_pairs(const hash_table_t *ht)
 {
-	unsigned long int num_pairs = 0;
+	unsigned long int i, num_pairs = 0;
+	hash_node_t *node;
 
-	for 
-
-
+	node = malloc(sizeof(hash_node_t));
+	for (i = 0; i < ht->size; i++)
+	{
+		if (ht->array[i] != NULL)
+		{
+			num_pairs++;
+			if (ht->array[i]->next != NULL)
+			{
+				node = ht->array[i]->next;
+				while (node != NULL)
+				{
+					num_pairs++;
+					node = node->next;
+				}
+			}
+		}
+	}
+	return (num_pairs);
+}
 /**
  * hash_table_print - prints a hash table
  * @ht : the hash table
@@ -16,38 +40,44 @@ unsigned long int count_pairs(const hash_table_t *ht)
  */
 
 void hash_table_print(const hash_table_t *ht)
-{	
-	unsigned long int i, flag = 0, num_pairs;
+{
+	unsigned long int i, count = 0, num_pairs;
 	hash_node_t *node;
 
 	if (ht == NULL)
-		printf("{}\n");
-	else
+		return;
+	num_pairs = count_pairs(ht);
+	if (num_pairs == 0)
 	{
-		num_pairs = count_pairs(ht);
-		node = malloc(sizeof(hash_node_t));
-		for (i = 0; i < ht->size; i++)
+		printf("{}\n");
+		return;
+	}
+	count = num_pairs;
+	node = malloc(sizeof(hash_node_t));
+	for (i = 0; i < ht->size; i++)
+	{
+		if (ht->array[i] != NULL)
 		{
-			if (ht->array[i] != NULL)
+			if (count == num_pairs)
+				printf("{");
+			printf("'%s' : '%s'", ht->array[i]->key, ht->array[i]->value);
+			if (num_pairs != 1)
+				printf(", ");
+			num_pairs--;
+			if (ht->array[i]->next != NULL)
 			{
-				if (count == 0)
+				node = ht->array[i]->next;
+				while (node != NULL)
 				{
-					printf("{");
-					count++;
-				}
-				printf("'%s' : '%s', ", ht->array[i]->key, ht->array[i]->value);
-				if (ht->array[i]->next != NULL)
-				{
-					node = ht->array[i]->next;
-					while (node != NULL)
-					{
-						printf("'%s' : '%s', ", ht->array[i]->key, ht->array[i]->value);
-						node = node->next;
-					}
+					printf("'%s' : '%s'", ht->array[i]->key, ht->array[i]->value);
+					if (num_pairs != 1)
+						printf(", ");
+					num_pairs--;
+					node = node->next;
 				}
 			}
-			if (i == ht->size - 1)
-				printf("}\n");
 		}
+		if (i == ht->size - 1)
+			printf("}\n");
 	}
 }
