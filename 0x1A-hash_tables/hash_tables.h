@@ -44,4 +44,14 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
 /* Task 3 function */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
+
+
+
+
+
+
+/* String Handling function */
+int _strlen(const char *s);
+char *_strcpy(char *dest, const char *src);
+
 #endif
