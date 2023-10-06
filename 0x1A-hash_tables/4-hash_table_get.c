@@ -14,16 +14,12 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (ht == NULL || key == NULL)
 		return (NULL);
-	printf("Ready to start the looping\n");
 	for (i = 0; i < ht->size; i++)
 	{
-		printf("Loopig started: %ld\n", i);
+		if (ht->array[i] == NULL)
+			continue;
 		if (strcmp(key, ht->array[i]->key) == 0)
-		{
-			printf("In\n");
 			return (ht->array[i]->value);
-		}
-
 	}
 	return (NULL);
 }
