@@ -71,11 +71,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!pair)
 		return (0);
 	pair->key = malloc(_strlen(key) + 1);
-	if (!pair->key)
-		return (0);
 	pair->value = malloc(_strlen(value) + 1);
-	if (!pair->value)
-		return (0);
 	_strcpy(pair->key, key);
 	_strcpy(pair->value, value);
 	pair->next = NULL;
@@ -101,5 +97,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			}
 		}
 	}
+	free(pair);
 	return (1);
 }

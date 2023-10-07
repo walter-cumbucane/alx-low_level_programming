@@ -30,6 +30,7 @@ unsigned long int count_pairs(const hash_table_t *ht)
 			}
 		}
 	}
+	free(node);
 	return (num_pairs);
 }
 /**
@@ -80,4 +81,5 @@ void hash_table_print(const hash_table_t *ht)
 		if (i == ht->size - 1)
 			printf("}\n");
 	}
+	free(node);
 }
