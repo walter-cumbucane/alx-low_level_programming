@@ -15,7 +15,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	if (ht == NULL || key == NULL)
 		return (NULL);
-	node = malloc(sizeof(hash_node_t));
 	for (i = 0; i < ht->size; i++)
 	{
 		if (ht->array[i] != NULL && ht->array[i]->key != NULL)
