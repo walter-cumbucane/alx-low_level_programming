@@ -42,20 +42,18 @@ unsigned long int count_pairs(const hash_table_t *ht)
 
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i, count = 0, num_pairs;
+	unsigned long int i, num_pairs;
 	hash_node_t *node;
 
 	if (ht == NULL)
 		return;
 	num_pairs = count_pairs(ht);
-	count = num_pairs;
 	node = malloc(sizeof(hash_node_t));
+	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
 		if (ht->array[i] != NULL)
 		{
-			if (count == num_pairs)
-				printf("{");
 			printf("'%s' : '%s'", ht->array[i]->key, ht->array[i]->value);
 			if (num_pairs != 1)
 				printf(", ");
@@ -73,8 +71,7 @@ void hash_table_print(const hash_table_t *ht)
 				}
 			}
 		}
-		if (i == ht->size - 1)
-			printf("}\n");
 	}
+	printf("}\n");
 	free(node);
 }
