@@ -48,11 +48,6 @@ void hash_table_print(const hash_table_t *ht)
 	if (ht == NULL)
 		return;
 	num_pairs = count_pairs(ht);
-	if (num_pairs == 0)
-	{
-		printf("{}\n");
-		return;
-	}
 	count = num_pairs;
 	node = malloc(sizeof(hash_node_t));
 	for (i = 0; i < ht->size; i++)
