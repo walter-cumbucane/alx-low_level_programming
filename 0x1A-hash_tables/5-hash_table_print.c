@@ -63,7 +63,7 @@ void hash_table_print(const hash_table_t *ht)
 				node = ht->array[i]->next;
 				while (node != NULL)
 				{
-					printf("'%s' : '%s'", ht->array[i]->key, ht->array[i]->value);
+					printf("'%s' : '%s'", node->key, node->value);
 					if (num_pairs != 1)
 						printf(", ");
 					num_pairs--;
