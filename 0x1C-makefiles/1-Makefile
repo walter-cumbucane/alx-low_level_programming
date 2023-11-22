@@ -3,6 +3,6 @@ SRC = *.c
 
 all: school
 
-school: main.c bro.c
+school: main.c school.c
 	$(CC) $(SRC) -o school
 
